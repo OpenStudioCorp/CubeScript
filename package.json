@@ -1,5 +1,5 @@
 {
-  "name": "cubescript",
+  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^1.1.2",
     "astro": "^3.3.0"
   }
 }
