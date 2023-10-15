@@ -7,7 +7,15 @@ body {
     color: #000000;
     background-color: #616161;
 }
+.documentation .hero {
+    background-color: #616161;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 
+
+}
 
 /* Windows 7 Aero Style */
 .cssanimation, .cssanimation span {
