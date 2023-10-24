@@ -1,14 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="theme.css">
     <title>Learn CubeScript</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #6b6b6b;
+           
         }
 
         h1 {
@@ -43,9 +48,16 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to the learning section</h1>
 
-    <p>at the moment, this part isnt finished yet.</p>
-    <a href="/learn/functions">this though is finished</a><p>so please go ^here^</p>
+    
+    <Layout title="cat">
+        
+        <h1>Welcome to the learning section</h1>
+        
+        <p>Nice to see someone for the first time in Ages</p>
+        <p>Not very many people show up here, so it's nice to see someone for once in a while.</p>
+        <p>at the moment, unfortunatly there are not that many things that exist on how to learn CubeScript</p>
+        <p>But this Exists though <a href="/learn/functions"> which should help out enough while i work on this.</a></p>
+    </Layout>
 </body>
 </html>
