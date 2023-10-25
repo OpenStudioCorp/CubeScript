@@ -3,24 +3,16 @@ import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 
 
-const documentationItems = [
-	{
-		title: 'Getting Started',
-		description: 'Learn how to get started with your JavaScript project.',
-		link: '/getting-started',
-	},
-	{
-		title: 'API Reference',
-		description: 'Explore the API reference for your JavaScript project.',
-		link: '/api-reference',
-	},
-	{
-		title: 'Tutorials',
-		description: 'Follow step-by-step tutorials on how to earn',
-		link: '/tutorials',
-	},
-];
+
 ---
+<head>
+	<meta property="og:title" content="CubeScript">
+    <meta property="og:description" content="the official Documetation infomation for CubeScript">
+    <meta property="og:image" content="https://cubescript.vercel.app/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:url" content="https://CubeScript.vercel.app">
+</head>
 <script src="../components/main.js"></script>
 <div>
 
@@ -29,82 +21,7 @@ const documentationItems = [
 	<div id="stars2"></div>
 	<div id="stars3"></div>
 	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div><div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
-</div>
+
 </div>
 <body><div style="text-align: center;">
 	
@@ -151,6 +68,12 @@ const documentationItems = [
 					title="Learn"
 					body="Learn how to use CubeScript."
 					/>
+					<Card
+					href="/Download"
+					title="Download"
+					body="Download the official CubeScript Compiler"
+					/>
+					
 				</div>
 			</div>
 			
