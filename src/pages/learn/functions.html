@@ -122,92 +122,23 @@ Struct main (string{} args)
             </code></pre>
         </div>
 
-        <div class="function">
-            <h2>Defining arrays</h2>
-            <p>
-                there are 2 different arrays. Static and Dynamic.
-            </p>
+    
 
-            <pre><code>
-Struct main (string{} args)
-{
-    // this launguage also supports arrays, which are defined like this
-
-    string{} names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
-    
-    // you can also use the var keyword to make the compiler automatically detect the type of the array and set it at runtime
-    
-    var names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
-    
-    //there are 2 different types of arrays, static and dynamic
-    
-    // static arrays are arrays that have a fixed size and cannot be changed after it has been set
-    // you can change the contents of the array but when you try to add or remove more then what the array can store or has from the array, it will throw an error
-    // when you run out of the caracters you have in the array, any blank fields will return null
-    
-    //static arrays are defined like this
-    
-    string[3] names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
-    
-    
-    // dynamic arrays are arrays that have a dynamic size and can be changed after it has been set
-    // you can change the contents of the array and you can also add or remove an item from the array and blank spots will be removed and not replaced with null
-    
-    //dynamic arrays are defined like this
-    
-    string{} names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
-    
-    // you can also use the var keyword to make the compiler automatically detect the type of the array and set it at runtime
-    
-    var  names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
-    
-    // notice how the brackets for defining the size of the array are missing, this is because the compiler will automatically detect the type of the array and set it at runtime
-    // nice and simple
-    
-    // you can also use the const keyword to make the array a constant, meaning that it cannot be changed after it has been set, even if it is a var array
-    
-    // now ive gotten some concern on how dynamic arrays resize on lets say, checking how many users in the instance of a game are online.
-    
-    // the dynamic array will, if defined to do so, will check the max plyayer count will be what of the world.
-    // if the max player count is 10, then the array will be 10, if the max player count is 100, then the array will be 100, and so on and so forth
-    // saves people from having to define the array size and then having to change it later on
-    }
-            </code></pre>
-        </div>
 
         <div class="function">
-            <h2>Defining constants</h2>
-            <p>
-                
-            </p>
-
-            <pre><code>
-
-Struct main (string{} args)
-{
-    const int a = 1;
-    const float b = 1.0;
-    const string c = "Hello";
-    const bool d = true;
-    const var e = 1; // var is a special keyword that will automatically detect the type of the variable based on the value at compile time.
-    // constants define a variable that cannot be changed after it has been set, even if it is a var variable.
-    // but heres the kicker, you can change the value of the constant if you call #force on it. still applies the locking to it if you dont call #force on it.
-    // yeah i know that it's not the greatest having that since people can just decompile the code and change it, but it's better then nothing.
-}
-            </code></pre>
-        </div>
-
-        <div class="function">
-            <h2>Defining classes</h2>
+            <h2>Defining classes and </h2>
             <p>
                 Classes are defined using the <code>House</code> keyword.
             </p>
             <pre><code>
 House: home // house being the namespace and home being the name of the namespace
 {
-    Struct main (string{} args)
+    room thing
     {
-     print("Hello World");   
+        Struct main (string[] args)
+        {
+        Print("Hello World");   
+        }
     }
 }
             </code></pre>
@@ -221,8 +152,7 @@ House: home // house being the namespace and home being the name of the namespac
             </p>
             <pre><code>
 using Home; // same as using system;
-using Home.FrountDoor; // same as using System.IO;
-using Home.BackDoor; // same as using System.Text;
+
             </code></pre>
 
             </div>
@@ -235,7 +165,7 @@ using Home.BackDoor; // same as using System.Text;
             <pre><code>
 Struct main (string{} args)
 {
-    string{} names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
+    string[] names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
 
     for(name in names{})
     {
@@ -252,9 +182,10 @@ Struct main (string{} args)
                 if your wanting to take in input or just want to set something so that it runs while true, you can use the <code>While</code> keyword. ontop of that, using the <code>if else</code> keywords, you can check if something is true or not.
             </p>
             <pre><code>
-Struct main (string{} args)
+                Using static Home;
+Struct main (string[] args)
 {
-    using home.letterbox;
+    
 
     string input = letterbox.IO();
     while(true)
@@ -280,15 +211,16 @@ Struct main (string{} args)
                 if you want to check if something is equal to something else, you can use the <code>Switch</code> keyword.
             </p>
             <pre><code>
-Struct main (string{} args)
+                using static Home;
+Struct main (string[] args)
 {
     string input = letterbox.IO();
     switch(input)
     {
-        AT "Hello":
+        at "Hello":
             print("Hello World");
             Stop;
-        AT "Goodbye":
+        at "Goodbye":
             print("Goodbye World");
             Stop;
         
