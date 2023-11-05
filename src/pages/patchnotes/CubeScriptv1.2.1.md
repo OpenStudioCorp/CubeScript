@@ -48,10 +48,16 @@ please wait while we finish the documentation.
 
 ## Installation
 
-### Windows
+### Windows and linux
 
 1. Download the latest version of CubeScript from the [Download](https://CubeScript.vercel.app/Download) page.
 
 2. Extract the zip file to a folder.
 
-3. Within the folder should be a libs folder, a CSVM.exe file, and a CSVMUpdater.exe file.
+3. Within the folder should be a libs folder, a CSVM.exe file, a CSVM.bin and a CSVMUpdater.exe file.
+
+4. place the windows exe or linux bin file in your folder that you want to work in and run the exe or bin file by typing ./CSVM.exe or ./CSVM.bin
+
+5. if you want to update the compiler, run the CSVMUpdater.exe file and it will update the compiler to the latest version.
+
+the CSVMUpdater is taking up most of the time required to finish this version of CubeScript, so please be patient while we finish the updater.
