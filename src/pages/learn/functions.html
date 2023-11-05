@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="/theme.css">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/theme.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CubeScript Functions</title>
     <link rel="stylesheet" href="theme.css">
@@ -32,18 +33,25 @@
             padding: 2px 4px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin: 10px 0; /* Add margin for spacing */
-            display: block; /* Ensure code blocks don't overlap */
+            margin: 10px 0;
+            /* Add margin for spacing */
+            display: block;
+            /* Ensure code blocks don't overlap */
             /* text wrapping */
-            white-space: pre-wrap; /* css-3 */
-            white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-            white-space: -pre-wrap; /* Opera 4-6 */
-            white-space: -o-pre-wrap; /* Opera 7 */
-            word-wrap: break-word; /* Internet Explorer 5.5+ */
+            white-space: pre-wrap;
+            /* css-3 */
+            white-space: -moz-pre-wrap !important;
+            /* Mozilla, since 1999 */
+            white-space: -pre-wrap;
+            /* Opera 4-6 */
+            white-space: -o-pre-wrap;
+            /* Opera 7 */
+            word-wrap: break-word;
+            /* Internet Explorer 5.5+ */
 
         }
     </style>
-    
+
     <script>
         function toggleDarkMode() {
             var element = document.body;
@@ -51,6 +59,7 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <h1>CubeScript How to</h1>
@@ -60,15 +69,17 @@
         <div class="function">
             <h2>Defining a function</h2>
             <p>
-                Functions are defined using the <code>Struct</code> keyword.
+                Functions are defined using the <code>struct</code> keyword.
             </p>
             <pre><code>
-Struct main (string{} args)
+struct main (string{} args)
 {
     
 }
             </code></pre>
-            <p>Functions are a way to group code together and execute it when needed. Functions can be called from other functions or from the console.</p>
+            <p>Functions are a way to group code together and execute it when needed. Functions can be called from other
+                functions or from the console.</p>
+                <p>you can also do public struct or private struct if you need it public or private</p>
         </div>
 
         <div class="function">
@@ -77,9 +88,9 @@ Struct main (string{} args)
                 When calling a function, just call it by name and pass any arguments it needs in the parentheses.
             </p>
             <pre><code>
-Struct speak(string text)
+restring speak(string text)
 {
-    print("Hello {text}");
+    Print($"Hello {text}");
 }
 
 speak("World");
@@ -92,13 +103,13 @@ speak("World");
                 Functions can return a value using the <code>return</code> keyword.
             </p>
             <pre><code>
-Struct add(int a, int b)
+reint add(int a, int b)
 {
     return a + b;
 }
 
 int result = add(1, 2);
-print(result); // 3
+Print(result); // 3
             </code></pre>
         </div>
 
@@ -106,11 +117,11 @@ print(result); // 3
             <h2>Defining varibles</h2>
             <p>
                 Variables are defined using 5 different keywords.
-                
+
             </p>
 
             <pre><code>
-Struct main (string{} args)
+public struct main (string{} args)
 {
     int a = 1;
     float b = 1.0;
@@ -122,7 +133,7 @@ Struct main (string{} args)
             </code></pre>
         </div>
 
-    
+
 
 
         <div class="function">
@@ -131,18 +142,19 @@ Struct main (string{} args)
                 Classes are defined using the <code>House</code> keyword.
             </p>
             <pre><code>
-House: home // house being the namespace and home being the name of the namespace
+house: home // house being the namespace and home being the name of the namespace
 {
     room thing
     {
-        Struct main (string[] args)
+        public struct main (string[] args)
         {
-        Print("Hello World");   
+            Print("Hello World");   
         }
     }
 }
             </code></pre>
-            <p>Classes are a way to group code together and execute it when needed. Classes allow you to have one import that allows you to have multiple fuctions within</p>
+            <p>Classes are a way to group code together and execute it when needed. Classes allow you to have one import
+                that allows you to have multiple fuctions within</p>
         </div>
 
         <div class="function">
@@ -151,25 +163,25 @@ House: home // house being the namespace and home being the name of the namespac
                 Classes are imported using the <code>using</code> keyword.
             </p>
             <pre><code>
-using Home; // same as using system;
+using static Home; // same as using system;
 
             </code></pre>
 
-            </div>
+        </div>
 
         <div class="function">
-            <h2>"For" controll structure</h2>
+            <h2>"for" controll structure</h2>
             <p>
                 if you want to iterate through something, you can use the <code>For</code> keyword.
             </p>
             <pre><code>
-Struct main (string{} args)
+public struct main (string[] args)
 {
-    string[] names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
+    string{} names = {"John Doe", "Jane Doe", "Bob Doe"}; // string array
 
-    for(name in names{})
+    for(name > names)
     {
-        print(name);
+        Print(name);
     }
 }
             </code></pre>
@@ -177,27 +189,29 @@ Struct main (string{} args)
         </div>
 
         <div class="function">
-            <h2>"While"  and "If" controll structure</h2>
+            <h2>"While" and "If" controll structure</h2>
             <p>
-                if your wanting to take in input or just want to set something so that it runs while true, you can use the <code>While</code> keyword. ontop of that, using the <code>if else</code> keywords, you can check if something is true or not.
+                if your wanting to take in input or just want to set something so that it runs while true, you can use
+                the <code>While</code> keyword. ontop of that, using the <code>if else</code> keywords, you can check if
+                something is true or not.
             </p>
             <pre><code>
                 Using static Home;
-Struct main (string[] args)
+public struct main (string[] args)
 {
     
 
-    string input = letterbox.IO();
+    string input = ReadLine();
     while(true)
     {
         if (input == "Hello") // GET DEFINED IN THIS ONE ASWELL!!!!
         {
-            print("Hello World");
+            Print("Hello World");
         }
         else // else keywords allow you to do something if the if statement is false
         
         {
-            print("invalid command");
+            Print("invalid command");
         }
     }
 }
@@ -208,24 +222,25 @@ Struct main (string[] args)
         <div class="function">
             <h2>"Switch" controll structure</h2>
             <p>
-                if you want to check if something is equal to something else, you can use the <code>Switch</code> keyword.
+                if you want to check if something is equal to something else, you can use the <code>Switch</code>
+                keyword.
             </p>
             <pre><code>
                 using static Home;
-Struct main (string[] args)
+public struct main (string[] args)
 {
     string input = letterbox.IO();
     switch(input)
     {
         at "Hello":
-            print("Hello World");
+            Print("Hello World");
             Stop;
         at "Goodbye":
-            print("Goodbye World");
+            Print("Goodbye World");
             Stop;
         
         bland:
-            print("invalid command");
+            Print("invalid command");
             Stop;
     }
 }
@@ -243,11 +258,12 @@ Struct main (string[] args)
     </footer>
 </body>
 <div class="bg-animation">
-	<div id="stars"></div>
-	<div id="stars2"></div>
-	<div id="stars3"></div>
-	<div id="stars4"></div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
 </div>
+
 </html>
 <!-- // struct definition for the cubescript coding language
 // this file defines 'the cubescript coding launguage and how it works
@@ -300,14 +316,14 @@ public bool isAlive = true; // bool.
 // this makes the varible stick to the type you set it to instead of doing this
 
 string name = "John Doe"; // string
-print(name) // prints John Doe
+Print(name) // Prints John Doe
 // and then doing this
 
 
 
 
 name = 123; // int
-print(name) // prints 123
+Print(name) // Prints 123
 
 // this is not allowed in this language as it is a strongly typed language and will throw an error
 
@@ -328,11 +344,11 @@ unable to compile code
 // same for changing the type of the varible
 
 var name = "John Doe"; // string
-print(name) // prints John Doe
+Print(name) // Prints John Doe
 // and then doing this
 
 name = 123; // int
-print(name) // prints 123
+Print(name) // Prints 123
 
 // if this happens and the varible has been read from, the compiler will change the type of the varible to the type of the value that is next assigned to it
 

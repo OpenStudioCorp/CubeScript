@@ -17,29 +17,28 @@ import Layout from '../layouts/Layout.astro';
     <title>getting-started</title>
 </head>
 <body>
-    <div class="typewriter">
+    
     <div class="cat">
 
         <Layout title="Getting Started with CubeScript">
 
             <h4 style="color: white ;">Getting Started with CubeScript's ApiReference</h4><br>
             
-            <p style="color: white ;">Welcome to the official documentation for the new CubeScript compiler and the old one!</p><br>
-            <p style="color: white;">CubeScript takes the writing style from c#, the type checking/definitions from typescript and everything else comes from python/lua</p><br>
-            
-            <p style="color: white;">In order to start writing CubeScript, you need to download the CubeScript compiler from <a href="https://CubeScript.vercel.app/Download" style="color: rgb(2, 255, 2);">here</a></p>
+   
+            <p>CubeScript Only has one library at the moment. hopefully more will be added soon.</p>
             <br>
-            <p>there is a vs code plugin for linting/syntax highlighing and warning/error checking</p>
+            <p> CubeScript's Stdlib, comonly refered to as the "Standard Library" is a library that comes with CubeScript by default. it contains all the basic functions and commands that you will need to make a CubeScript script. </p>
+            <p>the Home.dll that comes with the Compiler is the Stdlib in question, and so because of that, we will be going over the essential documentation for the Stdlib</p>
             <br>
-            <p>you can download it from the official downloads page linked at the home page of the site</p>
-            <br>
-            <h3 style="color: white;"></h3>
+            <p>Within Home.dll contains 2 classes, Home and Letterbox</p>
+        
+            <p>Home doesn't contain much at the moment, but it does contain some basic maths and print/error functions</p>
+            <p>you can visit the documentation for Home.dll <a href="/docs/home">here</a></p>
             <br>
         </div>
 
 
 
-    </div>
 
 
             
@@ -63,28 +62,7 @@ import Layout from '../layouts/Layout.astro';
         <div id="stars4"></div>
     </div>
 <style>
-    .typewriter h1,h2, h3, h4,h5,p  {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: wrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
     .windows {
   background-color: #868686;
   border: 1px solid #ccc;
