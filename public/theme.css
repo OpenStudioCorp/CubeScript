@@ -4,8 +4,9 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #000000;
- 
+    color: #3c108d;
+    background-image: "logo.png";
+
 }
 .documentation .hero {
 
