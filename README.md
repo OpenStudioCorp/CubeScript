@@ -1,15 +1,31 @@
-# CubeScript!!!!!!
+# The official Site for CubeScript!
 
-Welcome to the official repo for the CubeScript Documentation. This is a work in progress, and will be updated as time goes on.
+welcome to CubeScript, a interactive programming language designed by Charlie-sans at OpenStudio!
+
+This Site is built using astro and these framework plugins
+
+```json
+"@astrojs/mdx": "^1.1.2",
+"@astrojs/react": "^3.0.4",
+"@astrojs/svelte": "^4.0.3",
+"@astrojs/vue": "^3.0.4",
+"@types/react": "^18.0.21",
+"@types/react-dom": "^18.0.6",
+"astro": "^3.3.0",
+"react": "^18.0.0",
+"react-dom": "^18.0.0",
+"svelte": "^4.2.3",
+"vue": "^3.2.30"
+```
+
+so that means, if you know react and you want to help out, you can!
 
 ## What is CubeScript?
 
-CubeScript is a programming language that takes the typing from c#, the type definitions from typescript, and everything else from python and lua. It is a compiled language, and is compiled into whatever it compiles to because i can't describe it, which is then interpreted by the CubeScript Virtual Machine (CSVM).
+Cubescript is a Programming language based around CSharp. 
 
-## What is the CSVM?
+CubeScript is a Transpiled language and is constantly getting feature updates.
 
-The CSVM is a Compiler for CubeScript. It is written in C#, and is compiled into a .EXE file. and is used to Compile CubeScript.
+## How do i use CubeScript?
 
-## how to install CubeScript
-
-it's still in the works so it's not available yet.
+just visit the [Getting Started](https://CubeScript.vercel.app/gettingstarted) page to learn how to use CubeScript!
