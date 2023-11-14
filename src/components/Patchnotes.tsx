@@ -10,7 +10,7 @@ function notes()
     return (
         <div>
         <p>Patchnotes</p>
-        <p>ghjhg</p>
+        <p>this is the patchnotes working with Angular</p>
         </div>
     );
 }

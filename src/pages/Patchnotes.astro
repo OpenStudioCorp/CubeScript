@@ -1,9 +1,11 @@
 ---
 import Notes from '../components/Patchnotes.tsx';
+import {Stuff} from '../components/Stuff.component.ts';
 ---
 
 <div class="notes">
 <Notes client:load />
+<Stuff client:load standalone: true/>
 </div>
 
 <style>
