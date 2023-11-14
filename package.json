@@ -10,16 +10,38 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@analogjs/astro-angular": "^0.2.19",
+    "@angular-devkit/build-angular": "^17.0.0",
+    "@angular/animations": "^17.0.2",
+    "@angular/common": "^17.0.2",
+    "@angular/compiler": "^17.0.2",
+    "@angular/compiler-cli": "^17.0.2",
+    "@angular/core": "^17.0.2",
+    "@angular/language-service": "^17.0.2",
+    "@angular/platform-browser": "^17.0.2",
+    "@angular/platform-browser-dynamic": "^17.0.2",
+    "@angular/platform-server": "^17.0.2",
     "@astrojs/mdx": "^1.1.2",
     "@astrojs/react": "^3.0.4",
     "@astrojs/svelte": "^4.0.3",
     "@astrojs/vue": "^3.0.4",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.16",
+    "@mui/material": "^5.14.17",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^3.3.0",
+    "marked": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "rxjs": "^7.8.1",
     "svelte": "^4.2.3",
-    "vue": "^3.2.30"
+    "tslib": "^2.6.2",
+    "vue": "^3.2.30",
+    "zone.js": "^0.14.2"
+  },
+  "devDependencies": {
+    "@types/marked": "^6.0.0"
   }
 }

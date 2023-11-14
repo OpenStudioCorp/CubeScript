@@ -22,7 +22,7 @@ so that means, if you know react and you want to help out, you can!
 
 ## What is CubeScript?
 
-Cubescript is a Programming language based around CSharp. 
+Cubescript is a Programming language based around CSharp.
 
 CubeScript is a Transpiled language and is constantly getting feature updates.
 
