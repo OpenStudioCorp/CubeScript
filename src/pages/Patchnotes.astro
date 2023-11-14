@@ -1,14 +1,17 @@
 ---
-import Notes from '../components/Patchnotes.tsx';
-import {Stuff} from '../components/Stuff.component.ts';
+import Notes from '../components/Patchnotes.vue';
 ---
 
 <div class="notes">
 <Notes client:load />
-<Stuff client:load standalone: true/>
+
 </div>
 
 <style>
+:root {
+  --background: #00C5FF ;
+}
+
 
 * {
   box-sizing: border-box;
