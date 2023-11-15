@@ -10,4 +10,4 @@ export function getUpdate(query: string) {
     }
 
     return result;
-} 
+}
