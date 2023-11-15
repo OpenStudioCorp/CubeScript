@@ -1,11 +1,4 @@
----
-import Notes from '../components/vue/Patchnotes.vue';
-import styles from '../components/main.scss';
----
-
-<body>
-  <style>
-    :root {
+:root {
     --background: #877895;
   }
   body 
@@ -51,11 +44,3 @@ import styles from '../components/main.scss';
     padding: 0 1rem;
     background : var(--background);
   }
-  </style>
-  <div class="notes">
-    <Notes client:load />
-    <link rel="stylesheet" href="../components/main.scss" />
-  </div>
-</body>
-
-

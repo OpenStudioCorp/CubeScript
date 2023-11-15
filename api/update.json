@@ -1,0 +1,80 @@
+[
+    {
+        "id": "1",
+        "version": "Version 1.0",
+        "date": "02 Nov",
+        "description": "the first official Release",
+        "changes": [
+            { "id": 1, "description": "Welcome to the official Release of CubeScript 1.0!" },
+            { "id": 2, "description": "This introduces the CSVM/CubeScript Virtual Machine." },
+            { "id": 3, "description": "This First version introduces the Basic Stuff Required to work with CubeScript" }
+        ]
+        
+        
+    },
+    {
+        "id": "2",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "3",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "4",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "5",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "6",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    }
+]
