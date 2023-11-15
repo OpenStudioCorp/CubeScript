@@ -9,10 +9,38 @@ import Notes from '../components/Patchnotes.vue';
 
 <style>
 :root {
-  --background: #00C5FF ;
+  --background: #877895;
 }
-
-
+body 
+{
+  background: var(--background);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #9b59b6;
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+p {
+  color: #bdc3c7;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 * {
   box-sizing: border-box;
   --background: #fa;
@@ -24,4 +52,5 @@ import Notes from '../components/Patchnotes.vue';
   max-width: 800px;
   padding: 0 1rem;
   background : var(--background);
+}
 </style>

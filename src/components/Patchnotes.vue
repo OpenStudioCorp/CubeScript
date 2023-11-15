@@ -16,34 +16,20 @@
   </div>
 </template>
 
+
 <script>
+
+//get the json from the api/updates.json
+import patchnotes from "../api/updates.json";
+
+// read the json data and show it with the html
 export default {
+  name: "Patchnotes",
   data() {
     return {
-      patchnotes: [
-        {
-          id: 1,
-          version: "1.0.0",
-          date: "January 1, 2022",
-          description: "Initial release",
-          changes: [
-            { id: 1, description: "Added new feature X" },
-            { id: 2, description: "Fixed bug Y" },
-            { id: 3, description: "Improved performance" },
-          ],
-        },
-        {
-          id: 2,
-          version: "1.1.0",
-          date: "February 1, 2022",
-          changes: [
-            { id: 1, description: "Added new feature Z" },
-            { id: 2, description: "Fixed bug A" },
-            { id: 3, description: "Improved user interface" },
-          ],
-        },
-      ],
+      patchnotes: patchnotes
     };
-  },
+  }
 };
+    
 </script>
