@@ -5,7 +5,7 @@ import path from 'path';
 import rateLimit from 'express-rate-limit';
 
 async function getUpdate(id) {
-    const data = JSON.parse(fs.readFileSync('./src/update.json', 'utf8'));
+    const data = JSON.parse(fs.readFileSync('../src/update.json', 'utf8'));
 
     const result = data.find((update) => String(update.id) === id);
     if (!result) {
