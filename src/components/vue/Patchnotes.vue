@@ -68,7 +68,7 @@
 <script>
 
 //get the json from the api/updates.json
-import patchnotes from "../../../api/updates.json";
+import patchnotes from "../../api/updates.json";
 
 // read the json data and show it with the html
 export default {
