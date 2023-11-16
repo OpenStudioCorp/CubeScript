@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api reference</title>
+    <link rel="stylesheet" href="../../theme.css">
+</head>
+<body>
+    <p>So, your interested in the official CubeScript API endpoint at /api ?</p>
+    <p>Well, you've come to the right place!</p>
+    <p>On this page, we will take you over the available features of this endpoint</p>
+    <p>We will also show you how to use it in your own projects</p>
+    <p>whether it being a website, or a discord bot. We've got you covered!</p>
+    <br>
+    <h1>How to use the API</h1>
+    <p>There are a few endpoints available</p>
+    <p>Here is a list of them:</p>
+    <code>
+        <ul>
+            <li>/api</li>
+            <li>/api/commands</li>
+            <li>/api/updates</li>
+            <li>/api/latest</li>
+        </ul>
+    </code>
+    <p>Each of these endpoints have their own use</p>
+    <br>
+    <ul>
+        <li><code>/api</code> is the main directory for all endpoints in the list</li>
+        <li><code>/api/commands</code> this endpoint returns all available commands for the api endpoint in json format</li>
+        <li><code>/api/updates</code> this endpoint returns all available Versions of the CSVM transpiler in json format</li>
+        <li><code>/api/latest</code> this endpoint returns only the latest version of the CSVM transpiler in json format</li>
+    </ul>
+    <br>
+    <p>Now that you know what each endpoint does, lets get into how to use them</p>
+    <p>First, lets start with the main endpoint, <code>/api</code></p>
+    <p>This endpoint is the main directory for all other endpoints, not really of much use here, unless you want to mention the fact that if you use this endpoint, it just returns all The endpoint folders within the directory of /api so that the ones not listed here can still be used</p>
+    <p>Next, lets move onto <code>/api/commands</code></p>
+    <p>this endpoint returns all availabe endpoints that are supported by CubeScript and the maintainers of the Website</p>
+    <p>Now, noting back when i said that /api did this?</p>
+    <p>that one returns all the endpoints including the paths, plus the in development ones that arent truly tested</p>
+    <p>but this one only returns the ones that are tested and ready to be used in consumer / developer projects</p>
+    <p>Next, lets move onto <code>/api/updates</code></p>
+    <p>this endpoint returns all available versions of the CSVM transpiler in json format</p>
+    <p>when using this one, you need to provide a ?query=[number] at the end of the url</p>
+    <p>make sure to replace [number] with a value starting from 1</p>
+    <p>soon there should be a endpoint that returns the total id number for all available updates that you can GET request on </p>
+    <p>Next, lets move onto <code>/api/latest</code></p>
+    <p>this endpoint returns only the latest version of the CSVM transpiler in json format</p>
+    <p>no need to do the whole ?query thing on it, just use it as is</p>
+    <p>this one returns the latest version of the compiler, so you could kind of just farm this for the id number and use that. </p>
+    <p>but i wouldnt recommend it, as it would be a waste of resources. then again you could grab the id number while also showing the latest updates.</p>
+    <p>but thats up to you</p>
+    <br>
+
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+config:
+  target: 'http://localhost:3000' # replace with your function's URL
+  phases:
+    - duration: 3 # test duration in seconds
+      arrivalRate: 5 # new users per second
+scenarios:
+  - flow:
+      - get:
+          url: '/api?query=1' # replace with your function's path
