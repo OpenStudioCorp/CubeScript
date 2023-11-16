@@ -32,7 +32,10 @@
     "@mui/material": "^5.14.17",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@vercel/node": "^3.0.11",
     "astro": "^3.3.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.4",
     "marked": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -42,6 +45,7 @@
     "scss": "^0.2.4",
     "svelte": "^4.2.3",
     "tslib": "^2.6.2",
+    "vercel": "^32.5.5",
     "vue": "^3.2.30",
     "zone.js": "^0.14.2"
   },
