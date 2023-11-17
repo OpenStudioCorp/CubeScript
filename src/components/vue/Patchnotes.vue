@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<style>
+<!-- <style>
     :root {
     --background: #877895;
   }
@@ -63,7 +63,9 @@
     padding: 0 1rem;
     background : var(--background);
   }
-  </style>
+  </style> 
+-->
+
 
 <script>
 
