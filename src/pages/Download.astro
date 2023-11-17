@@ -1,55 +1,36 @@
 ---
-
-
 import Layout from "../layouts/Layout.astro"
+import DownloadCard from "../components/DownloadCard.astro"
+
 ---
 
 <title>Download</title>
 <Layout title="Download">
     
-
     <h1>Download</h1>
 
     <div class="download">
-
         <!-- download page that looks like the node.js installer page -->
-        <p>Download the latest version of the CubeScript compiler for Windows.</p>
-        <p>version 1.2</p>
-        <p>The Expanse Update!</p>
-        <p>This includes a .bin file within the zip file so that linux is now a supported target!!!</p>
-        <p>note that linux must have dotnet installed or it wont work, to get around this install CSVM and dotnet within wine.</p>
-        <p>CSVM is a standalone app that doesnt have an installer, which means it must be within your working directory where you are coding.</p>
-        <p>you can visit the Tutorials section to learn how to work with the CubeScript CSVM compiler by going <a href="/tutorial/">here</a></p>
-        <p>version 1.3 should fix this!</p> 
-               
-
+        <div class="main-content">
+            <p>Download the latest version of the CubeScript compiler for Windows.</p>
+            <p>Version 1.2</p>
+            <p>The Expanse Update!</p>
+            <p>This includes a .bin file within the zip file so that linux is now a supported target!!!</p>
+            <p>Note that linux must have dotnet installed or it wont work, to get around this install CSVM and dotnet within wine.</p>
+            <p>CSVM is a standalone app that doesnt have an installer, which means it must be within your working directory where you are coding.</p>
+            <p>You can visit the Tutorials section to learn how to work with the CubeScript CSVM compiler by going <a href="/tutorial/">here</a></p>
+            <p>Version 1.3 should fix this!</p>
+        </div> 
         
-        <div class="windows">
-
-            <h2>Windows and linux</h2>
-            <p>version 1.2.2, the Expanse Update</p>
-            <a href="https://github.com/charlie-sans/CVSM-Repo/releases/download/1.2.2/CubeScriptv1.2.2.zip">Download</a>
-            
+        <DownloadCard title={"Windows and linux"} version={"Version 1.2.2, the Expanse Update"} link={"https://github.com/charlie-sans/CVSM-Repo/releases/download/1.2.2/CubeScriptv1.2.2.zip"}  />
+        
+        <p class="older-version-text">Looking for a older version?</p>
+        
+        <div class="older-downloads">
+            <DownloadCard title={"CubeScript"} version={"Version 1.2.1, the Broken Update"} link={"https://github.com/charlie-sans/CVSM-Repo/releases/download/v1.2.1/CSVM_Linux.zip"} />            
+            <DownloadCard title={"CubeScript"} version={"Version 1.2"} link={"https://github.com/charlie-sans/CVSM-Repo/releases/download/v1.2/CubeScript-1.2.zip"} />
         </div>
-        
-        <p> looking for a older version? </p>
-        
-        <div class="windows">
             
-            
-            <div class="windows">
-                
-            
-                <p>CubeScript</p>
-                <p>version 1.2.1, the Broken Update</p>
-                <a href="https://github.com/charlie-sans/CVSM-Repo/releases/download/v1.2.1/CSVM_Linux.zip">Download</a>
-            </div>
-                <p>CubeScript</p>
-                <p>version 1.2</p>
-                <p> CubeScript compiler</p>
-                <a href="https://github.com/charlie-sans/CVSM-Repo/releases/download/v1.2/CubeScript-1.2.zip">Download</a>
-            
-
     </div>
 
 
@@ -57,55 +38,65 @@ import Layout from "../layouts/Layout.astro"
 
 <style>
 
-.download
-{
-    
+* {
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   color: white;
+   font-size: 18px;
 }
 
-.windows {
-  background-color: #868686;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 150px;
-  padding: 20px;
-  text-align: center;
-}
-.windows a{
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: center;
-    cursor: pointer;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-
-}
-*
-{
-   
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-a
-{
-    color: lightblue;
+h1 {
+    font-size: 2rem;
 }
 
-p
-{
-    color: white;
+.download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    row-gap: 1.5rem;
 }
-h1, h2
-{
-    color: white;
+
+.older-version-text {
+    width: 25rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+.main-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    padding: 1rem 2rem;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.8rem;
+    border-radius: 5px;
+}
+
+.main-content p {
+    margin: 0;
+    text-align: left;
+}
+
+.older-version-text {
+    font-size: 20px;
+}
+
+.older-downloads {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    width: 100%;
+}
+
 </style>
