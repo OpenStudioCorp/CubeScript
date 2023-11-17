@@ -15,5 +15,8 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
-  })
+  }),
+  server: {
+    host: true
+  }
 });
