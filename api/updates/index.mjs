@@ -1,53 +1,107 @@
 import * as fs from 'fs';
-import pkg from '@vercel/node';
-const { VercelRequest, VercelResponse } = pkg;
 import path from 'path';
-import rateLimit from 'express-rate-limit';
 
 async function getUpdate(id) {
-    const data = JSON.parse(fs.readFileSync('../src/update.json', 'utf8'));
-
-    const result = data.find((update) => String(update.id) === id);
-    if (!result) {
-        return `No updates found for id: ${id}`;
+  const data = [
+    {
+        "id": "1",
+        "version": "Version 1.0",
+        "date": "02 Nov",
+        "description": "the first official Release",
+        "changes": [
+            { "id": 1, "description": "Welcome to the official Release of CubeScript 1.0!" },
+            { "id": 2, "description": "This introduces the CSVM/CubeScript Virtual Machine." },
+            { "id": 3, "description": "This First version introduces the Basic Stuff Required to work with CubeScript" }
+        ]
+        
+        
+    },
+    {
+        "id": "2",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "3",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "4",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "5",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
+    },
+    {
+        "id": "6",
+        "version": "Version 1.1",
+        "date": "05 Nov",
+        "description": "This release includes some Bug Fixes and implements a new feature",
+        "changes": [
+            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
+            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+        ]
+        
+        
     }
+]
 
-    return result;
+  const result = data.find((update) => String(update.id) === id);
+  if (!result) {
+    return `No updates found for id: ${id}`;
+  }
+
+  return result;
 }
-
-const limiter = rateLimit({
-    windowMs: 60 * 1000, // 1 minute
-    max: 10, // limit each IP to 10 requests per windowMs
-    message: { error: 'Too many requests, please try again later.' },
-    keyGenerator: function (req) {
-      return req.headers['x-forwarded-for'] || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
-    }
-  });
 
 export default async (request, response) => {
-    return new Promise((resolve, reject) => {
-      limiter(request, response, (result) => {
-        if (result instanceof Error) {
-          reject(result);
-        } else {
-          resolve(result);
-        }
-      });
-    }).then(async () => {
-    try {
-        const query = request.query.query;
-        const result = await getUpdate(query);
-        if (!result) {
-            response.status(404).send({ error: 'No updates found for this id' });
-        } else {
-            response.setHeader('Content-Type', 'application/json');
-            response.status(200).send(JSON.stringify(result, null, 4));
-        }
-    } catch (error) {
-        response.status(500).send({ error: 'An error occurred while processing your request' });
+  try {
+    const query = request.query.query;
+    const result = await getUpdate(query);
+    if (!result) {
+      response.status(404).send({ error: 'No updates found for this id' });
+    } else {
+      response.setHeader('Content-Type', 'application/json');
+      response.status(200).send(JSON.stringify(result, null, 4));
     }
-    }
-    );
-}
-
-export { limiter };
+  } catch (error) {
+    response.status(500).send({ error: 'An error occurred while processing your request' });
+  }
+};
