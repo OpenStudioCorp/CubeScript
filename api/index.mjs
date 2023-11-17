@@ -11,7 +11,6 @@ export default async (request, response) => {
                 "path": "/api",
                 "description": "This page"
             },
-            
             {
                 "path": "/api/latest",
                 "description": "Get the latest update id"
