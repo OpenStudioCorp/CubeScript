@@ -6,7 +6,7 @@ const Errors = ({ ErrorName }) => {
 
   useEffect(() => {
     const fetchErrorContent = async () => {
-      const response = await fetch('/path/to/error/content.json');
+      const response = await fetch('https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/api/errors.json');
       const data = await response.json();
       const error = data.errors.find((error) => error.name === ErrorName);
       setErrorContent(error);
