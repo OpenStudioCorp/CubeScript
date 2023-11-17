@@ -15,8 +15,9 @@ async function getUpdate(id) {
     return result;
 }
 
+
 const limiter = rateLimit({
-    windowMs: 60 * 1000, // 1 minute
+    windowMs: 60 * 1000, // 1 minute s
     max: 10, // limit each IP to 10 requests per windowMs
     message: { error: 'Too many requests, please try again later.' },
     keyGenerator: function (req) {
