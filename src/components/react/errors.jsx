@@ -1,43 +1,36 @@
-
 import React, { useState, useEffect } from 'react';
 
-const Errors = ({ ErrorName }) => {
-  const [errorContent, setErrorContent] = useState(null);
+function ErrorPage() {
+  const [errorInfo, setErrorInfo] = useState([]);
 
   useEffect(() => {
-    const fetchErrorContent = async () => {
-      const response = await fetch('https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/api/errors.json');
-      const data = await response.json();
-      const error = data.errors.find((error) => error.name === ErrorName);
-      setErrorContent(error);
-    };
-
-    fetchErrorContent();
-  }, [ErrorName]);
+    // Fetch error information from API or data source
+    // Update the errorInfo state variable with the fetched data
+    // For example:
+    fetch('https://CubeScript.vercel.app/errors.json')
+      .then(response => response.json())
+      .then(data => setErrorInfo(data))
+      .catch(error => console.log(error));
+  }, []);
 
   return (
-    <div className="error-page">
-      <div className="sidebar">
-        <h2>Errors</h2>
+    <div>
+      <h1>Errors</h1>
+      <nav>
         <ul>
-          {errorContent &&
-            data.errors.map((error) => (
-              <li key={error.name}>
-                <a href={`#${error.name}`}>{error.name}</a>
-              </li>
-            ))}
+          <li><a href="#errors">Errors</a></li>
         </ul>
-      </div>
-      <div className="main">
-        {errorContent && (
-          <>
-            <h1>{errorContent.name}</h1>
-            <p>{errorContent.description}</p>
-          </>
-        )}
+      </nav>
+      <div>
+        {errorInfo.map(error => (
+          <div key={error.id}>
+            <h2>{error.title}</h2>
+            <p>{error.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
-};
+}
 
-export default Errors;
+export default ErrorPage;
