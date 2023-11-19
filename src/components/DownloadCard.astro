@@ -1,14 +1,22 @@
 ---
 const { title, version, link } = Astro.props;
+
+const styles = {
+  div: "download-card shadow-md bg-amber-600/60 w-[20rem] h-[10rem] p-4 rounded-md border-[3px] border-white flex flex-col justify-center items-center gap-y-2",
+  h2: "text-xl font-bold",
+  a: "bg-blue-700 text-white p-2 w-1/2 text-center rounded-md shadow-sm hover:shadow-lg font-bold"
+}
+
 ---
 
-<div class="download-card">
-  <h2>{title}</h2>
+
+<div class={styles.div}>
+  <h2 class={styles.h2}>{title}</h2>
   <p>{version}</p>
-  <a href={link}>Download</a>
+  <a class={styles.a} href={link}>Download</a>
 </div>
 
-<style>
+<!-- <style>
   .download-card:hover {
     scale: 1.05;
     margin: 0px 10px;
@@ -60,4 +68,4 @@ const { title, version, link } = Astro.props;
   p {
     font-weight: bold;
   }
-</style>
+</style> -->
