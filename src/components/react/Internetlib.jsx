@@ -18,7 +18,7 @@ function Internet() {
       <h1>Errors</h1>
       <nav>
         <ul>
-          <li><a href="#errors">Errors</a></li>
+          <li><a rel="prefetch" href="#errors">Errors</a></li>
         </ul>
       </nav>
       <div>

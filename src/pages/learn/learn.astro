@@ -1,4 +1,12 @@
-
+---
+import { createRef, onMount } from 'astro/client';
+let boxRef = createRef();
+onMount(() => {
+  boxRef.current.addEventListener('click', () => {
+    boxRef.current.classList.toggle('open');
+  });
+});
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +62,7 @@
         <p>Nice to see someone for the first time in Ages</p>
         <p>Not very many people show up here, so it's nice to see someone for once in a while.</p>
         <p>at the moment, unfortunatly there are not that many things that exist on how to learn CubeScript</p>
-        <p>But this Exists though <a href="/learn/functions"> which should help out enough while i work on this.</a></p>
+        <p>But this Exists though <a rel="prefetch" href="/learn/functions"> which should help out enough while i work on this.</a></p>
  
 </body>
 </html>

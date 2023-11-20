@@ -5,7 +5,7 @@ import DownloadCard from "../components/DownloadCard.astro"
 const styles = {
     h1: "font-bold text-4xl text-center my-2",
     downloadDiv: "download w-full flex flex-col items-center gap-y-5",
-    mainContentDiv: "main-content flex flex-col justify-center gap-y-3 md:gap-y-4 bg-black/50 w-[95%] md:w-3/4 h-auto md:h-[26rem] lg:h-[23rem] p-4 rounded-md shadow-lg border-2 ",
+    mainContentDiv: "main-content flex flex-col justify-center gap-y-3 md:gap-y-4 text-center bg-black/50 w-[95%] md:w-3/4 h-auto md:h-[26rem] lg:h-[23rem] p-4 rounded-md shadow-lg border-2 ",
     olderDownloadsP: "older-version-text font-bold mt-5 mb-2 w-[70%] md:w-[30%] text-center py-2 border rounded-md shadow-md bg-black/50",
     OlderDownloadsDiv: "older-downloads flex gap-x-5 flex-wrap justify-center gap-y-4 mb-2"
 }
@@ -23,11 +23,8 @@ const styles = {
         <p>Download the latest version of the CubeScript compiler for Windows.</p>
             <p>Version 1.2</p>
             <p>The Expanse Update!</p>
-            <p>This includes a .bin file within the zip file so that linux is now a supported target!!!</p>
-            <p>Note that linux must have dotnet installed or it wont work, to get around this install CSVM and dotnet within wine.</p>
-            <p>CSVM is a standalone app that doesnt have an installer, which means it must be within your working directory where you are coding.</p>
-            <p>You can visit the Tutorials section to learn how to work with the CubeScript CSVM compiler by going <a href="/tutorial/">here</a></p>
-            <p>Version 1.3 should fix this!</p>
+            <p>you can view the patchnotes <a rel="prefetch"  href="/Patchnotes">here</a></p>
+           
         </div> 
         
         <DownloadCard title={"Windows and linux"} version={"Version 1.2.2, the Expanse Update"} link={"https://github.com/charlie-sans/CVSM-Repo/releases/download/1.2.2/CubeScriptv1.2.2.zip"}  />

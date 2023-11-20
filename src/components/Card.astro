@@ -9,7 +9,7 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
+	<a rel="prefetch" href={href}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
