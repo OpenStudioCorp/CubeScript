@@ -1,12 +1,13 @@
 ---
-import { createRef, onMount } from 'astro/client';
-let boxRef = createRef();
+import { onMount } from 'astro/client';
+let boxRef;
 onMount(() => {
-  boxRef.current.addEventListener('click', () => {
-    boxRef.current.classList.toggle('open');
-  });
+    boxRef.addEventListener('click', () => {
+        boxRef.classList.toggle('open');
+    });
 });
 ---
+<div ref={el => (boxRef = el)}>Click me</div>
 
 <!DOCTYPE html>
 <html lang="en">
