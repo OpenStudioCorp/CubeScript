@@ -1,4 +1,9 @@
-## CubeScript
+<img src="https://media.discordapp.net/attachments/1081010638911971330/1182351396658491472/Screenshot_2023-12-07_105852.png?ex=6584618b&is=6571ec8b&hm=da1a247aaf9ff142b0802eae574f29c697c79ecb8fd136ca2304df971b12eb2e&=&format=webp&quality=lossless" 
+     alt="CubeScript Logo" 
+     width="450" 
+     height="300" 
+     style="margin: auto; display: block; margin-bottom: -50px;">
+
 
 > CubeScript is actively under development. Please bear with us as we strive to implement continuous improvements. Thank you for your patience!
   
@@ -48,5 +53,3 @@ Linux Installation:
   
   ## 📄 Contributing
   If you have experience with React, your contributions are highly appreciated! Feel free to contribute to the development of CubeScript.
-
-    
