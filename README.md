@@ -1,8 +1,20 @@
-# The official Site for CubeScript!
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 0px;">
+  <img src="https://media.discordapp.net/attachments/1081010638911971330/1182351396658491472/Screenshot_2023-12-07_105852.png?ex=6584618b&is=6571ec8b&hm=da1a247aaf9ff142b0802eae574f29c697c79ecb8fd136ca2304df971b12eb2e&=&format=webp&quality=lossless" alt="CubeScript Logo" width="450" height="300" style="margin-bottom: -50px;">
+<div>
+  
+  ## 🚀 Overview
 
-welcome to CubeScript, a interactive programming language designed by Charlie-sans at OpenStudio!
+Welcome to CubeScript, an interactive programming language crafted by the OpenStudio Team.
+<br>
+The language is transpiled and consistently receives feature updates.
 
-This Site is built using astro and these framework plugins
+## 🤔 What is CubeScript?
+
+CubeScript is a versatile scripting language grounded in the C-style family of programming languages.
+
+## 🛠️ Frameworks and Plugins
+
+This site is constructed using Astro and the following framework plugins:
 
 ```json
 "@astrojs/mdx": "^1.1.2",
@@ -18,14 +30,24 @@ This Site is built using astro and these framework plugins
 "vue": "^3.2.30"
 ```
 
-so that means, if you know react and you want to help out, you can!
+## 📦 Installation
 
-## What is CubeScript?
+Requirements:
 
-Cubescript is a Programming language based around CSharp.
+```md
+Linux Installation:
 
-CubeScript is a Transpiled language and is constantly getting feature updates.
+- Ensure dotnet is installed on Linux.
+- For compatibility, use CSVM and dotnet within wine.
+```
 
-## How do i use CubeScript?
+To install CubeScript, please visit the official [CubeScript](https://cubescript.vercel.app/#downloads) website for the latest version.
 
-just visit the [Getting Started](https://CubeScript.vercel.app/gettingstarted) page to learn how to use CubeScript!
+## ️⚡ Usage
+
+⚠️ Currently, there is no documentation available for CubeScript ⚠️
+<br> Please bear with us as we work on providing comprehensive information about the usage of CubeScript.
+
+## 📄 Contributing
+
+If you have experience with React, your contributions are highly appreciated! Feel free to contribute to the development of CubeScript website.
