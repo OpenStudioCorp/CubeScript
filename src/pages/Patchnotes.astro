@@ -1,20 +1,41 @@
 ---
-import Notes from '../components/vue/Patchnotes.vue';
-import styles from '../components/main.scss';
+import Layout from "../layouts/Layout.astro";
+import styles from "../components/main.scss";
+import Update from "../components/react/Update.jsx";
+
+const patchnotesUrl =
+  "https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/api/update.json";
+const fetchUpdates = await fetch(patchnotesUrl);
+const updatesData = await fetchUpdates.json();
+
+const styles = {
+  h1: "my-5 text-center text-3xl text-white font-bold",
+  div: "flex flex-col gap-y-5 w-full items-center text-white mb-4"
+}
+
 ---
 
-<body>
-  <style>
-    :root {
+
+  <h1 class={styles.h1}>Patchnotes</h1>
+    <div class={styles.div}>
+      {
+        updatesData.map((update) => (
+            <Update update={update} />
+        ))
+      }
+    </div>
+    p
+
+<!-- 
+<style>
+  :root {
     --background: #877895;
   }
-  body 
-  {
+  body {
     background: #877895;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
   }
   a {
     color: #c90000;
@@ -24,7 +45,12 @@ import styles from '../components/main.scss';
     color: #9b59b6;
     text-decoration: underline;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #000000;
     font-weight: bold;
     font-family: Arial, sans-serif;
@@ -42,20 +68,12 @@ import styles from '../components/main.scss';
   * {
     box-sizing: border-box;
     --background: #fa;
-  
   }
-  
+
   .notes {
     margin: 0 auto;
     max-width: 800px;
     padding: 0 1rem;
-    background : var(--background);
+    background: var(--background);
   }
-  </style>
-
-<div class="notes">
-  <Notes client:load />
-</div>
-</body>
-
-
+</style> -->
