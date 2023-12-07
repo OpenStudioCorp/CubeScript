@@ -1789,21 +1789,21 @@ body.is-preload #footer {
 	margin: auto;
 	text-align: center;
 	/* 5px rounded corners */
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  #downloads .card {
+}
+
+#downloads .card {
 	max-width: 100%;
-	width: 100%; /* Set to 100% to allow cards to share the same row */
+	width: 100%;
+	/* Set to 100% to allow cards to share the same row */
 	padding: 0.5rem;
 	/* Adjust padding as needed */
 	background-color: rgba(27, 31, 34, 0.85);
 	border-radius: 4px;
 	margin-bottom: 0.5rem;
 	/* Adjust margin between cards */
-  }
-  
+}
