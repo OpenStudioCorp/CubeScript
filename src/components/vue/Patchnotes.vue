@@ -78,6 +78,9 @@ export default {
   data() {
     return {
       patchnotes: patchnotes
+      <div>
+    <h1>Patchnotes</h1>
+    </div>
     };
   }
 };

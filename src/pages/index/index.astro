@@ -1,0 +1,117 @@
+---
+import Internet from "../../components/vue/internet.vue";
+import Update from "../../components/react/Update.jsx";
+const styles = {
+  h1: "my-5 text-center text-3xl text-white font-bold",
+  div: "flex flex-col gap-y-5 w-full items-center text-white mb-4"
+}
+const patchnotesUrl =
+  "https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/api/update.json";
+const fetchUpdates = await fetch(patchnotesUrl);
+const updatesData = await fetchUpdates.json();
+---
+
+<div class="windows-container">
+  <div class="sidebar">
+    <select name="cat" set:text="cat">
+      <option value="">Select a catagory</option>
+      <option value="article1">library's</option>
+      <option value="article2">Errors</option>
+        <option value="article3">learn</option>
+        <option value="article4">Patchnotes</option>        
+    </select>
+
+  </div>
+
+  <div class="content">
+    <div class="article" x-data="{ selectedArticle: '' }">
+      <template x-if="selectedArticle === 'article1'">
+        <h2>Article 1</h2>
+        <p>This is the content of Article 1.</p>
+      </template>
+      <template x-if="selectedArticle === 'article2'">
+        <h1 class={styles.h1}>Patchnotes</h1>
+    <div class={styles.div}>
+      {
+        updatesData.map((update) => (
+            <Update update={update} client:load/>
+        ))
+      }
+    </div>
+      </template>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .windows-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+  .sidebar {
+    width: 200px;
+    background-color: #0078d7;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .article {
+    border: 1px solid #0078d7;
+    padding: 20px;
+    background-color: rgb(79, 0, 143);
+    color: aliceblue;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectBox = document.querySelector('select[name="cat"]');
+    const outputDiv = document.querySelector('.article');
+
+    // Add some default HTML content when the page is loaded
+    outputDiv.innerHTML = `
+        <h2>Welcome!</h2>
+        <p>This page contains links to all of the pages within the official CubeScript site</p>
+        <p>Use the dropdown menu on the sidebar to select a page to view</p>
+    `;
+
+    selectBox.addEventListener('change', function() {
+        const selectedOption = selectBox.value;
+        outputDiv.innerHTML = '';
+
+        if (selectedOption === 'article1') {
+            outputDiv.innerHTML = `
+                <h2>libraries</h2>
+                <p>The most important part of coding.</p>
+                <p>libraries are the most important part of coding, they are the building blocks of your code.</p>
+                <p> without them, you wouln't be able to do anything.</p>
+                <p> well not anything, but you get the point.</p>
+                <p>you can visit the documentation for the libraries <a href="/docs/documentation">here</a></p>
+            `;
+        } else if (selectedOption === 'article2') {
+            outputDiv.innerHTML = `
+                <h2>Article 2</h2>
+                <p>This is the content of Article 2.</p>
+            `;
+        } else if (selectedOption === 'article3') {
+            outputDiv.innerHTML = `
+                <h2>Article 3</h2>
+                <p>This is the content of Article 3.</p>
+            `;
+        } else {
+            outputDiv.innerHTML = `
+                
+            stuff... oh hi there! did not expect for you to do that. uhhh, mmmmmmm
+            `;
+        }
+    });
+});
+</script>

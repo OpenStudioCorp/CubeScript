@@ -1,62 +1,99 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Internet from "../../components/vue/internet.vue";
+import Update from "../../components/react/Update.jsx";
+const styles = {
+  h1: "my-5 text-center text-3xl text-white font-bold",
+  div: "flex flex-col gap-y-5 w-full items-center text-white mb-4"
+}
+const patchnotesUrl =
+  "https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/api/update.json";
+const fetchUpdates = await fetch(patchnotesUrl);
+const updatesData = await fetchUpdates.json();
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="theme.css">
-    <title>Learn CubeScript</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-           
-        }
+<div class="windows-container">
+  <div class="sidebar">
+    <select name="cat" set:text="cat">
+      <option value="">Select a library</option>
+      <option value="article1">Home</option>
+      <option value="article2">Internet</option>
+    </select>
 
-        h1 {
-            color: #ffffff;
-        }
+  </div>
 
-        p {
-            color: #ffffff;
-        }
+  <div class="content">
+    <div class="article" x-data="{ selectedArticle: '' }">
+      <template x-if="selectedArticle === 'article1'">
+        <h2>Article 1</h2>
+        <p>This is the content of Article 1.</p>
+      </template>
+      <template x-if="selectedArticle === 'article2'">
+        <h1 class={styles.h1}>Patchnotes</h1>
+    <div class={styles.div}>
+      {
+        updatesData.map((update) => (
+            <Update update={update} client:load/>
+        ))
+      }
+    </div>
+      </template>
 
-        .function {
-            margin: 20px 0;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+    </div>
+  </div>
+</div>
 
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin: 10px 0; /* Add margin for spacing */
-            display: block; /* Ensure code blocks don't overlap */
-            /* text wrapping */
-            white-space: pre-wrap; /* css-3 */
-            white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-            white-space: -pre-wrap; /* Opera 4-6 */
-            white-space: -o-pre-wrap; /* Opera 7 */
-            word-wrap: break-word; /* Internet Explorer 5.5+ */
-        }
-    </style>
-</head>
-<body>
+<style>
+  .windows-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
 
-    
-    <Layout title="cat">
-        
-        <h1>Welcome to the learning section</h1>
-        
-        <p>Nice to see someone for the first time in Ages</p>
-        <p>Not very many people show up here, so it's nice to see someone for once in a while.</p>
-        <p>at the moment, unfortunatly there are not that many things that exist on how to learn CubeScript</p>
-        <p>But this Exists though <a href="/learn/functions"> which should help out enough while i work on this.</a></p>
-    </Layout>
-</body>
-</html>
+  .sidebar {
+    width: 200px;
+    background-color: #0078d7;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .article {
+    border: 1px solid #0078d7;
+    padding: 20px;
+    background-color: rgb(79, 0, 143);
+    color: aliceblue;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        const selectBox = document.querySelector('select[name="cat"]');
+        const outputDiv = document.querySelector('.article');
+
+        selectBox.addEventListener('change', function() {
+            const selectedOption = selectBox.value;
+            outputDiv.innerHTML = '';
+
+            if (selectedOption === 'article1') {
+                outputDiv.innerHTML = `
+                    <h2>Article 1</h2>
+                    <p>This is the content of Article 1.</p>
+                `;
+            } else if (selectedOption === 'article2') {
+                outputDiv.innerHTML = `
+                    <h2>Article 2</h2>
+                    <p>This is the content of Article 2.</p>
+                `;
+            } else if (selectedOption === 'article3') {
+                outputDiv.innerHTML = `
+                    <h2>Article 3</h2>
+                    <p>This is the content of Article 3.</p>
+                `;
+            }
+        });
+    });
+</script>
