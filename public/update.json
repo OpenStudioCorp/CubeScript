@@ -27,52 +27,45 @@
     },
     {
         "id": "3",
-        "version": "Version 1.1",
+        "version": "Version 1.2",
         "date": "05 Nov",
-        "description": "This release includes some Bug Fixes and implements a new feature",
+        "description": "Welcome to the New CubeScript 1.2 update called { The Expanse }",
         "changes": [
-            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
-            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
-            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+            { "id": 1, "description": "Using ret then a type will setup a public static string, var, int etc" },
+            { "id": 2, "description": "CPC/CubeScript Project Creator 1.1 This release includes Creating a DLL Class Lib project" },
+            { "id": 3, "description": "CubeScript Project Creator Now Supports Compiling Multiple Files together so you can class your code better!" }
         ]
         
         
     },
     {
         "id": "4",
-        "version": "Version 1.1",
-        "date": "05 Nov",
-        "description": "This release includes some Bug Fixes and implements a new feature",
+        "version": "Version 1.2.1",
+        "date": "07 Nov",
+        "description": "This Release improves the usage with the compiler and adds some new features.",
         "changes": [
-            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
+            { "id": 1, "description": "properly implented re functions. in total, you have access to restring, reint, rebool and revoid." },
             { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
-            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+            { "id": 3, "description": "Bug Fixes" },
+            { "id": 4, "description": "fixed a bug that wouldn’t allow you to compile a script if you didn’t remove the compile include from the csproj file." },
+            { "id": 5, "description": " fixed the creation of projects and updater not working on linux." },
+            { "id": 6, "description": "Known Issues" },
+            { "id": 6, "description": "the official CubeScript Doumentation is not yet complete, and is still being worked on." }
+            
         ]
         
         
     },
     {
         "id": "5",
-        "version": "Version 1.1",
-        "date": "05 Nov",
+        "version": "Version 1.2.2",
+        "date": "10 Nov",
         "description": "This release includes some Bug Fixes and implements a new feature",
         "changes": [
             { "id": 1, "description": "CubeScript Project Creation version 1.0" },
             { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
-            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
-        ]
-        
-        
-    },
-    {
-        "id": "6",
-        "version": "Version 1.1",
-        "date": "05 Nov",
-        "description": "This release includes some Bug Fixes and implements a new feature",
-        "changes": [
-            { "id": 1, "description": "CubeScript Project Creation version 1.0" },
-            { "id": 2, "description": "This version of the CPC unfortunatly only creates a csproj file and a cusp file for making a simple Console based app." },
-            { "id": 3, "description": "Hopefully the Next version improves the CPC enough that it allows you to create more then one Project." }
+            { "id": 3, "description": "Bug Fixes" },
+            { "id": 4, "description": "When compiling on Linux, the transpiler wont produce a output. this has now been fixed as of Friday November 10th" }
         ]
         
         
