@@ -1,10 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import styles from "../components/main.scss";
+import Layout from "../layouts/Layout.astro.jsx";
+
 import Update from "../components/react/Update.jsx";
 
 const patchnotesUrl =
-  "https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/api/update.json";
+  "https://raw.githubusercontent.com/OpenStudioCorp/CubeScript/master/public/update.json";
 const fetchUpdates = await fetch(patchnotesUrl);
 const updatesData = await fetchUpdates.json();
 
