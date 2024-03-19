@@ -39,9 +39,18 @@
           <div class="inner">
             <h1>CubeScript</h1>
             <p>A creative transpiled language From the OpenStudio Team</p>
-            <p>This site is currently under mantinence for updates, please try again later</p>
           </div>
         </div>
+        <nav>
+          <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#work">CubeScript</a></li>
+            <li><a href="/tutorial/api-reference">API</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="patchnotes">Patchnotes</a></li>
+            <li><a href="#downloads">Downloads</a></li>
+          </ul>
+        </nav>
       </header>
 
       <!-- Main -->

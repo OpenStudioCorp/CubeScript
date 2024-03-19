@@ -61,7 +61,7 @@ Print(result); // 3
 
 int somenumber = 1;
 int anothernumber = 2;
-int result = Subtract(somenumber, anothernumber);
+int resul = Subtract(somenumber, anothernumber);
 Print(result); // -1
 
 ```

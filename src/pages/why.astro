@@ -1,11 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>why?</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="image">
+        <img
+          src="https://openstudiocorp.vercel.app/developerProfiles/Charlie.png"
+          alt="charleston-block"
+        />
+        <p>charleston-block</p>
+      </div>
+      <h1>Why?</h1>
+      <h1>Why make a programming language?</h1>
+      <br />
+      <br />
+      <p>Why not!</p>
+      <p>Why not make a programming language</p>
+      <p>Why not make something that you have no clue</p>
+      <p>
+        how to make and struggle through the whole thing just to make it work?
+      </p>
+      <br />
+      <p>Why not make something that you can call your own?</p>
+      <p>Why not make something that you can be proud of?</p>
+      <p>Why not make something that you can show off to your friends?</p>
+      <p>
+        making CubeScript is a dream, the ability to code in something you
+        actualy know fully with no headaches
+      </p>
+      <p>and no need to look up documentation every 5 seconds is quite fun!</p>
+      <br />
+      <p>
+        though, the question still stands. why on earth would you make this?
+      </p>
+      <p>the answer is still simple, why not?</p>
+      <p>CubeScript is a dream</p>
+      <p>and I'm going to make it a reality</p>
+      <br />
+      <p>
+        ever since i was a kid, looking online at the cool game tutorials and
+        programming languages.
+      </p>
+      <p>i said to myself, one day i will make one. and that day is now!</p>
+      <p>
+        Working at and for OpenStudio has taught me alot of key skills to
+        progress,</p><p> and i can't forget to say thanks to all the developers that
+        have helped me.
+      </p>
+        <p>so here they are!</p>
+        <div id="developers" class="developers"></div>
+        <br />
+
+      <script>
+        const developers = [
+          {
+            name: "Charlie sans",
+            image: "Charlie.png",
+            link: "https://github.com/charlie-sans",
+            description: "just a house cat dammit",
+            skills: "software engineer, c#, python",
+          },
+          {
+            name: "Beatzoid",
+            image: "Beatzoid.png",
+            link: "https://github.com/Beatzoid",
+            description: "yeah",
+            skills: "",
+          },
+          {
+            name: "Syembol",
+            image: "Syembol.png",
+            link: "https://github.com/Syembol",
+            description: "pizza time",
+            skills: "",
+          },
+          {
+            name: "H4rl",
+            image: "H4rl.png",
+            link: "https://github.com/h4rldev",
+            description: "i will nuke your house with crabs",
+            skills: "",
+          },
+          {
+            name: "ProSureString",
+            image: "ProSureString.png",
+            link: "https://github.com/ProSureString",
+            description: "just keep smiling even tho they look like a bomb",
+            skills: "",
+          },
+          {
+            name: "Exedice",
+            image: "Exedice.png",
+            link: "https://github.com/Ex-ce-pt",
+            description: "just dont die ¯_(ツ)_/¯",
+            skills: "web developer, js, ts, svelte",
+          },
+          {
+            name: "DieDerick87",
+            image: "derick.jpg",
+            link: "https://github.com/sourena-kazemi",
+            description:
+              "Just another dude learning new stuff, screw you sour-orange and your tailwind",
+            skills: "",
+          },
+          {
+            name: "Sourena",
+            image: "sourena.png",
+            link: "https://github.com/sourena-kazemi",
+            description:
+              "Charlieeeee you cant copy that much html, I love tailwind btw",
+            skills: "web developer, js, ts, react, svelte",
+          },
+          {
+            name: "shabman",
+            image: "shabman.gif",
+            link: "https://github.com/shabman",
+            description: "thats a bit shabby innit?",
+            skills: "",
+          },
+          {
+            name: "Dunkin",
+            image: "Dunkin.png",
+            link: "https://github.com/DaviesOwonibi",
+            description: "are you expecting me to say something smart?",
+            skills: "",
+          },
+          {
+            name: "Divine",
+            image: "Divine.jpg",
+            link: "https://github.com/divinewrites",
+            description: "professional nigerian prince",
+            skills: "ts/js/rust/python and other stupid languages",
+          },
+          {
+            name: "Jason",
+            image: "jasonuc.jpg",
+            link: "https://github.com/jasonuc",
+            description: "cyber maestro",
+            skills: "Next.js, React, Astro, TypeScript & JavaScript, Tailwind",
+          },
+        ];
+        for (let name in developers) {
+          let html = document.getElementById("developers");
+          html.innerHTML += `<a href="${developers[name].link}"><img src="https://openstudiocorp.vercel.app/developerProfiles/${developers[name].image}" alt="${developers[name].name}"></a> <p>${developers[name].name}</p> <p>${developers[name].description}</p> <p>${developers[name].skills}</p>`;
+        }
+      </script>
+    </div>
+  </body>
 </html>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+    img {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    
+    .developers img {
+        width: 10px;
+        height: 10px;
+    }
+    
+    h1 {
+        font-family: monospace;
+        font-size: 20px;
+    }
+    
+    br {
+        margin: 10px;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color-scheme: dark;
+        background-color: grey;
+    }
+    
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #d3bf;
+        font-size: 70px;
+        image-resolution: from-image;
+        size: 300px;
+        font-family: monoton;
+    }
+    
+    /* animate class main to swoop in */
+    .main {
+        animation: swoop 2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: monospace;
+        font-size: 20px;
+    }
+    
+    .developers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+  @keyframes swoop {
+    0% {
+      transform: translatey(1000px);
+    }
+    100% {
+      transform: translatey(0%);
+    }
+  }
+</style>
+<script>
+  // make the image rotate
+  let img = document.querySelector("img");
+  img.style.transition = "transform 2s ease-in-out";
+  img.style.transform = "rotate(360deg)";
+
+  // make the text fade in
+  let p = document.querySelectorAll("p");
+  p.forEach((p) => {
+    p.style.transition = "opacity 5s ease-in-out";
+    p.style.opacity = "1";
+  });
+
+  // make the background color change
+  let body = document.querySelector("body");
+  body.style.transition = "background-color 2s ease-in-out";
+  body.style.backgroundColor = "black";
+  body.style.color = "white";
+</script>
